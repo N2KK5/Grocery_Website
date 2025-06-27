@@ -1,0 +1,33 @@
+<section class="img2 grid gap-4 justify-center items-center my-3 p-4">
+     <div class="w-full max-w-xs">
+            <form action="/auth/register" method="post" class="bg-gray-300 text-2xl shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                  <label class="block text-gray-700 text-xl font-bold mb-2" for="name">
+                    Username
+                  </label>
+                    <input name="username" class="box-border border-2 border-black rounded w-full py-2 px-3 text-black bg-transparent" type="text" placeholder="Username">
+                </div>
+
+
+             <div class="mb-6">
+                <label class="block text-gray-700 text-xl font-bold mb-2" for="password">
+                    Password
+                </label>
+                    <input name="password" class="box-border border-2 border-black rounded w-full py-2 px-3 text-black bg-transparent" type="password" placeholder="*****">
+            </div>
+           <input class="bg-blue-500 hover:bg-blue-700 text-black text-xl font-bold py-2 px-4 rounded focus:outline-none focus:shadow_outline" type="submit" value="Create Account">
+            
+            <a class="inline-block align-baseline font-bold text-lg text-black hover:text-blue-800" href="/account">
+                 Login
+            </a>
+            </form>
+            {{#if msg }}
+                <div>
+                    <p class="text-2xl text-black font-bold tracking-widest text-center my-2">
+                        {{ msg }}
+                    </p>
+                </div>
+            {{/if}}
+   </div>
+</section>
+

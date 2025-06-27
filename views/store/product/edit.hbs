@@ -1,0 +1,26 @@
+<section>
+    <div class="grid h-screen justify-center items-center bg-green-200 p-10">
+        <div class="grid gap-2 bg-black p-4 rounded">
+            <div class="text-center my-4 text-green-200 text-4xl">
+                Edit the Product Informations
+            </div>
+            {{#if product}}
+            <form action="/update-product/{{ product._id }}?_method=PUT" method="post" class="grid text-green-200 text-xl tracking-widest font-bold">
+                <label for="name" class="grid gap-2">
+                    Name <br>
+                    <input class="bg-transparent border-2 border-stone-900 rounded focus:border-2 focus:border-green-200 p-2 my-2" type="text" name="name" placeholder="Enter the product name"  value="{{ product.name }}" >
+                </label>
+                <label for="name" class="grid gap-2">
+                    Price <br>
+                    <input class="bg-transparent border-2 border-stone-900 rounded focus:border-2 focus:border-green-200 p-2 my-2" type="text" name="price" placeholder="Enter the price" value="{{ product.price }}">
+                </label>
+                <label for="description" class="grid gap-2">
+                    Description <br>
+                    <textarea name="description" class="bg-transparent border-2 border-stone-900 rounded focus:border-2 focus:border-green-200 p-2">{{ product.description }}</textarea> <br>
+                </label>
+                <input class="border-2 border-green-200 font-bold p-2 rounded hover:bg-green-200 hover:text-black tracking-widest" type="submit" value="UPDATE">
+            </form>
+            {{/if}}
+        </div>
+    </div>
+</section>

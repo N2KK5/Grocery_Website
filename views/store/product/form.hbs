@@ -1,0 +1,220 @@
+<!--form-->
+<section class="img3 grid gap-4 justify-center items-center my-2 p-4">
+<div class="w-full max-w-xs">
+  <form class="bg-gray-300 text-2xl shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-xl font-bold mb-2" for="username">
+          Name
+        </label>
+         <input class="box-border border-2 border-black rounded w-full py-2 px-3 text-black bg-transparent" id="username" type="text" placeholder="name">
+      </div>
+       <div class="mb-6">
+        <label class="block text-gray-700 text-xl font-bold mb-2" for="password">
+          Email
+      </label>
+      <input class="box-border border-2 border-black border-red-500 rounded w-full py-2 px-3 text-black mb-3 bg-transparent" id="password" type="email" placeholder="abc@gmail.com">
+    </div>
+    
+
+        <div class="mb-6">
+      <label class="block text-gray-700 text-xl font-bold mb-2" for="password">
+           Phone Number
+      </label>
+      <input class="box-border border-2 border-black border-red-500 rounded w-full py-2 px-3 text-black mb-3 bg-transparent" id="password" type="text" placeholder="1122">
+    </div>
+
+        <div class="mb-6">
+      <label class="block text-gray-700 text-xl font-bold mb-2" for="password">
+        Address
+      </label>
+      <input class="box-border border-2 border-black border-red-500 rounded w-full py-2 px-3 text-black mb-3 bg-transparent" id="password" type="text" placeholder="---">
+    </div>
+
+        <div class="mb-6">
+      <label class="block text-gray-700 text-xl font-bold mb-2" for="password">
+        State
+      </label>
+      <input class="box-border border-2 border-black border-red-500 rounded w-full py-2 px-3 text-black mb-3 bg-transparent" id="password" type="text" placeholder="---">
+    </div>
+
+        <div class="mb-6">
+      <label class="block text-gray-700 text-xl font-bold mb-2" for="password">
+       City
+      </label>
+      <input class="box-border border-2 border-black border-red-500 rounded w-full py-2 px-3 text-black mb-3 bg-transparent" id="password" type="text" placeholder="---">
+    </div>
+
+    
+                    <!--qty-->
+
+  <p class="font-bold">Quantity</p>
+
+    <div class="quantity">
+        <button class="btn minus-btn disabled" type="button">-</button>
+        <input type="text" id="quantity" value="1">
+        <button class="btn plus-btn" type="button">+</button>
+    </div>
+
+     
+
+
+   
+    <script>
+        //setting default attribute to disabled of minus button
+        document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+
+        //taking value to increment decrement input value
+        var valueCount
+
+        //taking price value in variable
+        var price = document.getElementById("price").innerText;
+
+        //price calculation function
+        function priceTotal() {
+            var total = valueCount * price;
+            document.getElementById("price").innerText = total
+        }
+
+        //plus button
+        document.querySelector(".plus-btn").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity").value;
+
+            //input value increment by 1
+            valueCount++;
+
+            //setting increment input value
+            document.getElementById("quantity").value = valueCount;
+
+            if (valueCount > 1) {
+                document.querySelector(".minus-btn").removeAttribute("disabled");
+                document.querySelector(".minus-btn").classList.remove("disabled")
+            }
+
+            //calling price function
+            priceTotal()
+        })
+
+        //plus button
+        document.querySelector(".minus-btn").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity").value;
+
+            //input value increment by 1
+            valueCount--;
+
+            //setting increment input value
+            document.getElementById("quantity").value = valueCount
+
+            if (valueCount == 1) {
+                document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+            }
+
+            //calling price function
+            priceTotal()
+        })
+    </script>
+
+
+    <!--will calculate price-->
+    <p class="total-price text-black">
+        <span><i class="fa fa-rupee"></i></span>
+        <span id="price">100</span>
+    </p>
+
+
+
+
+
+    
+
+    <a href="/order" class="btn btn-primary my-2 px-2 text-xl text-black font-bold">Submit</a>
+
+  </form>
+</div>
+</section>
+
+
+<!--qty-->
+
+<div class="text-white">
+
+  <p class="font-bold">Confirm Quantity</p>
+
+    <div class="quantity">
+        <button class="btn minus-btn disabled text-white" type="button">-</button>
+        <input type="text" id="quantity" class="text-white" value="1">
+        <button class="btn plus-btn text-white" type="button">+</button>
+    </div>
+
+     
+
+
+   <div class="text-white">
+    <script>
+        //setting default attribute to disabled of minus button
+        document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+
+        //taking value to increment decrement input value
+        var valueCount
+
+        //taking price value in variable
+        var price = document.getElementById("price").innerText;
+
+        //price calculation function
+        function priceTotal() {
+            var total = valueCount * price;
+            document.getElementById("price").innerText = total
+        }
+
+        //plus button
+        document.querySelector(".plus-btn").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity").value;
+
+            //input value increment by 1
+            valueCount++;
+
+            //setting increment input value
+            document.getElementById("quantity").value = valueCount;
+
+            if (valueCount > 1) {
+                document.querySelector(".minus-btn").removeAttribute("disabled");
+                document.querySelector(".minus-btn").classList.remove("disabled")
+            }
+
+            //calling price function
+            priceTotal()
+        })
+
+        //plus button
+        document.querySelector(".minus-btn").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity").value;
+
+            //input value increment by 1
+            valueCount--;
+
+            //setting increment input value
+            document.getElementById("quantity").value = valueCount
+
+            if (valueCount == 1) {
+                document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+            }
+
+            //calling price function
+            priceTotal()
+        })
+    </script>
+    </div>
+
+
+    <!--will calculate price-->
+    <p class="total-price text-black">
+        <span id="price" class="text-white">100</span>
+    </p>
+
+</div>
+
+
+

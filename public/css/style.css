@@ -1,0 +1,97 @@
+.brand {
+    font-family: "Playwrite IE Guides", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Poiret One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.img {
+    background-image: url('/assets/acc.jpg');
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Scales the image to cover the entire element */
+    background-position: center; /* Centers the image */
+}
+
+
+.img1 {
+    background-image: url('/assets/juice.jpg');
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Scales the image to cover the entire element */
+    background-position: center; /* Centers the image */    
+}
+
+.img2 {
+    background-image: url('/assets/create.jpg');
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Scales the image to cover the entire element */
+    background-position: center; /* Centers the image */    
+}
+
+.img3 {
+    background-image: url('/assets/pay.avif');
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Scales the image to cover the entire element */
+    background-position: center; /* Centers the image */    
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background: #272a36;
+    margin-top: 50px;
+}
+
+
+/***************/
+
+.quantity {
+    display: flex;
+    justify-content: center;
+}
+
+.quantity button {
+    width: 20px;
+    height: 35px;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 0;
+    background: #fff;
+}
+
+.quantity input {
+    border: none;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    width: 100px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 300;
+}
+
+.total-price {
+    font-size: 20px;
+}
+
+.total-price .fa-rupee {
+    display: inline-block;
+    font-size: 90%;
+    margin-right: 5px;
+}
+
+
+
+
+
